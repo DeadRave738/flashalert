@@ -1,29 +1,46 @@
-# flash_alert
+﻿# FlashAlert ⚡
 
-A new Flutter project.
+Android application that uses the camera flashlight to signal incoming calls and notifications.
 
-## Getting Started
+**Version:** 3.4  
+**Author:** DeadRave738  
+**Developed with assistance from:** ChatGPT by OpenAI
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Flash alerts for incoming calls
+- Flash alerts for app notifications
+- Customizable flashing patterns
+- Quiet hours
+- Battery and thermal safety controls
+- Notification listener recovery after reboot
+- Dark Liquid Glass-style interface
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Requirements
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Android smartphone with a camera flashlight
+- Notification access permission
+- Phone-state permission for call alerts
+- Background activity permission where required by the device manufacturer
 
-## Author
+## Build from source
 
-**DeadRave738**
+Install Flutter and the Android development tools.
 
-Developed with the assistance of **ChatGPT by OpenAI**.
+```powershell
+flutter pub get
+flutter build apk --release
+The APK is generated at:
 
-## Project
+build/app/outputs/flutter-apk/app-release.apk
 
-FlashAlert is an Android application developed using Flutter and Kotlin.
-It uses the camera flashlight for incoming call and notification alerts.
+Note: The current project uses a debug signing key for release builds.
+Configure a private production signing key before distributing official APKs.
+Compatibility
+Tested on TECNO Spark 10 Pro, Android 13 / HiOS.
 
+Some manufacturers restrict background activity, so automatic recovery after reboot is not guaranteed on every device.
+License
+MIT License. See LICENSE.
+Credits
+Created by DeadRave738 with the assistance of ChatGPT by OpenAI.
